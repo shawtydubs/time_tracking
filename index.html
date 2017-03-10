@@ -1,0 +1,76 @@
+<html ng-app='timeTracking'>
+<head>
+    <title>Time Tracking</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller='timeController'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <h4>What did you do today?</h4>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-md-12'>
+                <h5>Enter any new projects first:</h5>
+                <form id='add-project' ng-submit='addProject()'>
+                    <input type='text' ng-model='newProject' placeholder='What is your new project?'>
+                </form>
+            </div>
+        </div>
+                        
+        <div class='row'>
+            <div class='col-md-12'>
+                <h5>Check any projects you worked on:</h5>
+            </div>
+            <div class='project-item col-md-12' ng-repeat='project in projectList track by project.id | orderBy: project.name'>
+                <input type='checkbox' ng-model='projectsWithTime[project.name]'/>{{project.name}}
+                <a class='btn-delete-one pull-right' ng-click='removeProject(project)'><i class='glyphicon glyphicon-remove'></i></a>
+            </div>
+        </div>
+
+        <div class='row' ng-hide='isEmpty(timesheetSummary)'>
+            <div class='col-md-12'>
+                <h5>Timesheet Summary:</h5>
+            </div>
+            <div class='col-md-12'>
+                <table>
+                    <tr>
+                        <th class='header'>Project</th>
+                        <th class='header'>Minutes</th>
+                    </tr>
+                    <tbody ng-repeat="(date, projects) in timesheetSummary">
+                        <tr>
+                            <th colspan="2">{{date}}</th>
+                        </tr>
+                        <tr ng-repeat="(name, minutes) in projects">
+                            <td>{{name}}</td>
+                            <td>{{minutes}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-12'>
+            <a id='btn-submit-time' ng-click='submitTime()' class='btn btn-small btn-default'>Submit Time</a>
+            <a id='btn-delete-all' ng-click='deleteAllProjects()' class='btn btn-small btn-default pull-right'>Delete All</a>
+        </div>
+        <div class='col-md-12 text-center'>
+            <a id='btn-clear-time' ng-click='clearTimesheet()' class='btn btn-small btn-default'>Clear Timesheet</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/moment/moment.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/timeContoller.js"></script>
+    <script type="text/javascript" src="app/timeStorage.js"></script>
+</body>
+</html>
