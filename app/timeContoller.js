@@ -52,7 +52,7 @@ angular.module('timeTracking').controller('timeController', function ($scope, ti
         }
 
         var minutes = SUBMIT_TIME / Object.keys($scope.projectsWithTime).length;
-        var date = '2017-03-11'; //moment().format('YYYY-MM-DD');
+        var date = moment().format('YYYY-MM-DD');
         console.log(date);
         var newTime = $scope.timesheetSummary;
         if (!newTime.hasOwnProperty(date)) { newTime[date] = {} };
