@@ -31,6 +31,12 @@
             </div>
         </div>
 
+        <div class='row'>
+            <div class='col-md-12'>
+                <a id='btn-submit-time' ng-click='submitTime()' class='btn btn-small btn-default'>Submit Time</a>
+            </div>
+        </div>
+
         <div class='row' ng-hide='isEmpty(timesheetSummary)'>
             <div class='col-md-12'>
                 <h5>Timesheet Summary:</h5>
@@ -56,11 +62,8 @@
     </div>
 
     <div class='row'>
-        <div class='col-md-12'>
-            <a id='btn-submit-time' ng-click='submitTime()' class='btn btn-small btn-default'>Submit Time</a>
-            <a id='btn-delete-all' ng-click='deleteAllProjects()' class='btn btn-small btn-default pull-right'>Delete All Projects</a>
-        </div>
         <div class='col-md-12 text-center'>
+            <a id='btn-delete-all' ng-click='deleteAllProjects()' class='btn btn-small btn-default'>Delete All Projects</a>
             <a id='btn-clear-time' ng-click='clearTimesheet()' class='btn btn-small btn-default'>Clear Timesheet</a>
         </div>
     </div>
