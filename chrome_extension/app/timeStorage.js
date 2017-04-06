@@ -8,7 +8,9 @@ angular.module('timeTracking').service('timeStorage', function ($q) {
 
     this.getProjects = function(callback) {
         chrome.storage.sync.get('project', function(keys) {
-            _this.projectData = keys.project;
+            if (keys.project !== undefined) {
+                _this.projectData = keys.project;
+            }
             console.log('Project data:', _this.projectData)
             callback(_this.projectData);
         })
@@ -44,7 +46,9 @@ angular.module('timeTracking').service('timeStorage', function ($q) {
 
     this.getTimesheet = function(callback) {
         chrome.storage.sync.get('timesheet', function(keys) {
-            _this.timesheetData = keys.timesheet;
+            if (keys.timesheet !== undefined) {
+                _this.timesheetData = keys.timesheet;
+            }
             console.log('Timesheet data:', _this.timesheetData);
             callback(_this.timesheetData);
         })
