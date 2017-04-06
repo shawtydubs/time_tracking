@@ -34,16 +34,19 @@ th, tr, td {
     padding: 2px 5px;
 }
 
-#btn-clear-time {
-    width: 90%;
-}
-
 #btn-submit-time {
     background-color: #98e698;
+    margin-left: 0;
 }
 
 #btn-delete-all {
     background-color: #ff9999;
+    width: 90%;
+    margin-bottom: 0;
+}
+
+#btn-clear-time {
+    width: 90%;
 }
 
 .btn.btn-small.btn-default {
