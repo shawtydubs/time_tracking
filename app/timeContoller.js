@@ -1,6 +1,6 @@
 'use strict';
 
-const SUBMIT_TIME = 60;
+const SUBMIT_TIME = 30;
 
 angular.module('timeTracking').controller('timeController', function ($scope, timeStorage) {
     $scope.timeStorage = timeStorage;

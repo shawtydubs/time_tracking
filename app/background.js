@@ -1,16 +1,16 @@
 //create alarm
 
-chrome.alarms.create('Timesheet Alarm', { delayInMinutes: 60, periodInMinutes: 60 })
+chrome.alarms.create('Timesheet Alarm', { delayInMinutes: 30, periodInMinutes: 30 })
 
 chrome.alarms.onAlarm.addListener(function(alarm) {
-    console.log('Alarm fired', alarm);
+    console.log('Alarm fired:', alarm);
     callNotification();
 });
 
 // setup notification
 
 chrome.notifications.getPermissionLevel(function(level) {
-    console.log('Permission level', level);
+    console.log('Notification permission:', level);
 });
 
 function callNotification() {
@@ -23,7 +23,11 @@ function callNotification() {
         };
 
     function notificationLogging(notificationId) {
-        console.log("Last error:", chrome.runtime.lastError);
+        if (chrome.runtime.lastError) {
+            console.log('Last Error:', chrome.runtime.lastError);
+        } else {
+            console.log('Notification Fired:', notificationId);
+        }
     } 
 
     chrome.notifications.create(noteName, options, notificationLogging(noteName));
