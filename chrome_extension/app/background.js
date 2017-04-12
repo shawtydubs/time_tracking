@@ -19,7 +19,7 @@ function callNotification() {
             type: "basic",
             iconUrl: "images/icon.png",
             title: "Timesheet Reminder",
-            message: "It's time to fill in your time for the previous hour"
+            message: "It's time to fill in your time for the previous half hour"
         };
 
     function notificationLogging(notificationId) {

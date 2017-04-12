@@ -3,7 +3,7 @@
 
   "name": "Time Tracking",
   "description": "This extension allows a user to track their work incrementally throughout the day",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "background": {
     "scripts": ["app/background.js"],
