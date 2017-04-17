@@ -45,15 +45,17 @@
                 <table>
                     <tr>
                         <th class='header'>Project</th>
-                        <th class='header'>Minutes</th>
+                        <th class='header'>In Hours</th>
+                        <th class='header'>In Minutes</th>
                     </tr>
                     <tbody ng-repeat="(date, projects) in timesheetSummary">
                         <tr>
-                            <th colspan="2">{{date}}</th>
+                            <th colspan="3">{{date}}</th>
                         </tr>
                         <tr ng-repeat="(name, minutes) in projects">
                             <td>{{name}}</td>
-                            <td>{{minutes}}</td>
+                            <td>{{(minutes / 60).toFixed(2)}}</td>
+                            <td>{{minutes.toFixed(0)}}</td>
                         </tr>
                     </tbody>
                 </table>
