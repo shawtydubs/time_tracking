@@ -82,4 +82,14 @@ angular.module('timeTracking').controller('timeController', function ($scope, ti
             return false;
         }
     }
+
+    $scope.sumHours = function(obj) {
+      var sum = 0;
+      for (var p in obj) {
+        if (obj.hasOwnProperty(p)) {
+          sum += parseFloat(obj[p]);
+        }
+      }
+      return sum;
+    }
 });
