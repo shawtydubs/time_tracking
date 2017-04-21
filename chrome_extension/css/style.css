@@ -34,6 +34,14 @@ th, tr, td {
     padding: 2px 5px;
 }
 
+#date {
+    float: left;
+}
+
+#hours {
+    float: right;
+}
+
 #btn-submit-time {
     background-color: #98e698;
     margin-left: 0;

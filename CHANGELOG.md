@@ -1,3 +1,7 @@
+##1.0.7
+**2017-04-20**  
+* Add the total hours per day so users can see if they're on track
+
 ## 1.0.6
 **2017-04-17**  
 * Add a column that shows total time in hours, in addition to total time in minutes, as this is how time is entered on timesheets
