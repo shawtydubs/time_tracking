@@ -1,4 +1,4 @@
-##1.0.7
+## 1.0.7
 **2017-04-20**  
 * Add the total hours per day so users can see if they're on track
 
