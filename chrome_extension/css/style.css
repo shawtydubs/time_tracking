@@ -50,11 +50,11 @@ th, tr, td {
 #btn-delete-all {
     background-color: #ff9999;
     width: 90%;
-    margin-bottom: 0;
 }
 
 #btn-clear-time {
     width: 90%;
+    margin-bottom: 0;
 }
 
 .btn.btn-small.btn-default {
