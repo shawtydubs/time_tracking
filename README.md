@@ -7,12 +7,7 @@ Time Tracking is a Chrome Extension that reminds you to track your time througho
 
 How to Install
 ---
-Currently, this is not published on the Chrome Web Store. That is the plan eventually, once it is fleshed out a little more, but for now you'll have to install it manually.
-1. Clone the repository (or fork and clone it if you prefer)
-2. Open your extensions window by typing `chrome:extension` in the URL bar
-3. Check `Developer Mode` in the top right
-4. Click the `Load Unpacked Extension` button and search for the `time_tracking` folder you cloned
-5. Select the `chrome_extension` folder within `time_tracking`. It should now be available in your Chrome taskbar.
+You can install this via the Chrome Web Store: https://chrome.google.com/webstore/detail/time-tracking/mjcohamkemipmhnkfdboclamcihfmhgi?authuser=2
 
 Adding & Deleting Projects
 ---
